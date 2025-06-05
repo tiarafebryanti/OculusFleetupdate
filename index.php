@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -20,75 +20,9 @@
 
 <body>
 
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="../assets/img/logo-oculus.png" alt="logo" />
-                </span>
-            </div>
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu"></div>
-            <ul class="menu-links">
-                <li class="nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>">
-                    <a href="index.php">
-                        <i class="fa-solid fa-house icon"></i>
-                        <span class="text nav-text">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-link <?= $current_page == 'tripsummary.php' ? 'active' : '' ?>">
-                    <a href="">
-                        <i class="fas fa-window-maximize icon"></i>
-                        <span class="text nav-text">Trip Summary</span>
-                    </a>
-                </li>
-                <li class="nav-link <?= $current_page == 'configuration.php' ? 'active' : '' ?>">
-                    <a href="">
-                        <i class="fas fa-sliders-h icon"></i>
-                        <span class="text nav-text">Configuration</span>
-                    </a>
-                </li>
-                <li class="nav-link <?= $current_page == 'schedule.php' ? 'active' : '' ?>">
-                    <a href="">
-                        <i class="fas fa-calendar-days icon"></i>
-                        <span class="text nav-text">Schedule</span>
-                    </a>
-                </li>
-                <li class="nav-link <?= $current_page == 'sign-up.php' ? 'active' : '' ?>">
-                    <a href="">
-                        <i class="fas fa-right-from-bracket icon"></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <?php include "sidebar.php"; ?>
     <div id="map"></div>
-    <header class="header">
-        <div class="search-container">
-            <input type="text" placeholder="Search..." />
-            <i class='bx bx-search'></i>
-        </div>
-        <div class="profile-badge">
-            <div class="badge-content">
-                <div class="profile-icon">
-                    <svg class="profile-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#666">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2c-3.3 0-9.8 1.7-9.8 5v2h19.6v-2c0-3.3-6.5-5-9.8-5z" />
-                    </svg>
-                </div>
-                <div>
-                    <div class="profile-up">Jane Doe</div>
-                    <div class="profile-down">Admin</div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include "header.php"; ?>
 
     <main class="main-content position-relative border-radius-lg">
 
@@ -212,7 +146,7 @@
     </script>
 
 
-    <script src="script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
